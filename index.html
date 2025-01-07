@@ -5,41 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sudoku Solver</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-  <h1>Sudoku Solver</h1>
-  <div id="game-container">
-    <div id="instructions">
-      <h3>Instructions</h3>
-      <p>Fill the grid so that every row, column, and 3x3 box contains the digits 1 to 9.</p>
-      <p>Each number can appear only once in a row, column, or box.</p>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sudoku Solver</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div id="sudoku-grid"></div>
-    <div id="timer-container">
-      <button id="start-button">Start</button>
-      <button id="solve-button" disabled>Show Solution</button>
-      <button id="reset-button">Reset</button>
-      <p id="timer">Time Remaining: 5:00</p>
+  </nav>
+
+  <div class="container mt-4">
+    <h1 class="text-center">Sudoku Solver</h1>
+    <div id="game-container" class="d-flex flex-wrap justify-content-center mt-3">
+      <div id="instructions" class="p-3 border bg-light rounded">
+        <h3>Instructions</h3>
+        <p>Fill the grid so that every row, column, and 3x3 box contains the digits 1 to 9.</p>
+        <p>You have 5 minutes to solve the puzzle. Click "Show Solution" if you're stuck.</p>
+      </div>
+
+      <div id="sudoku-grid" class="m-3"></div>
+
+      <div id="timer-container" class="text-center">
+        <button id="start-button" class="btn btn-success">Start</button>
+        <button id="solve-button" class="btn btn-warning" disabled>Show Solution</button>
+        <button id="submit-button" class="btn btn-primary" disabled>Submit</button> <!-- New Submit Button -->
+        <button id="reset-button" class="btn btn-danger">Reset</button>
+        <p id="timer" class="mt-2">Time Remaining: 5:00</p>
+      </div>
     </div>
-    <div id="rules">
-      <h3>Rules</h3>
-      <ul>
-        <li>Only numbers 1-9 are allowed in each cell.</li>
-        <li>You have 5 minutes to solve the puzzle.</li>
-        <li>Click "Show Solution" if you're stuck, but this will end the game.</li>
-        <li>Click "Reset" to restart the puzzle and timer.</li>
-      </ul>
+    <div id="thought-container" class="text-center mt-4 p-3 border bg-light rounded">
+      <p id="thought" class="fst-italic">
+        "Challenges are what make life interesting. Overcoming them is what makes life meaningful." - Joshua J. Marine
+      </p>
     </div>
   </div>
-  <div id="thought-container">
-    <p id="thought">"Challenges are what make life interesting. Overcoming them is what makes life meaningful." - Joshua J. Marine</p>
-  </div>
-  <div id="timer-container">
-    <button id="start-button">Start</button>
-    <button id="solve-button" disabled>Show Solution</button>
-    <button id="reset-button">Reset</button>
-    <p id="timer">Time Remaining: 5:00</p>
-  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

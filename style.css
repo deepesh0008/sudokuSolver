@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f7f7f7;
+  background-color: #f8f9fa;
   color: #333;
   margin: 0;
   padding: 0;
@@ -32,8 +32,7 @@ h1 {
 #sudoku-grid {
   display: grid;
   grid-template-columns: repeat(9, 40px);
-  grid-template-rows: repeat(9, 40px);
-  gap: 1px;
+  grid-gap: 1px;
   margin: 0 auto;
   width: 362px;
 }
