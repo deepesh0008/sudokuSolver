@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Solver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sudoku Solver</h1>
+  <div id="game-container">
+    <div id="instructions">
+      <h3>Instructions</h3>
+      <p>Fill the grid so that every row, column, and 3x3 box contains the digits 1 to 9.</p>
+      <p>Each number can appear only once in a row, column, or box.</p>
+    </div>
+    <div id="sudoku-grid"></div>
+    <div id="timer-container">
+      <button id="start-button">Start</button>
+      <button id="solve-button" disabled>Show Solution</button>
+      <button id="reset-button">Reset</button>
+      <p id="timer">Time Remaining: 5:00</p>
+    </div>
+    <div id="rules">
+      <h3>Rules</h3>
+      <ul>
+        <li>Only numbers 1-9 are allowed in each cell.</li>
+        <li>You have 5 minutes to solve the puzzle.</li>
+        <li>Click "Show Solution" if you're stuck, but this will end the game.</li>
+        <li>Click "Reset" to restart the puzzle and timer.</li>
+      </ul>
+    </div>
+  </div>
+  <div id="thought-container">
+    <p id="thought">"Challenges are what make life interesting. Overcoming them is what makes life meaningful." - Joshua J. Marine</p>
+  </div>
+  <div id="timer-container">
+    <button id="start-button">Start</button>
+    <button id="solve-button" disabled>Show Solution</button>
+    <button id="reset-button">Reset</button>
+    <p id="timer">Time Remaining: 5:00</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
